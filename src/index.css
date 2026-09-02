@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Neo-Classical Archival Theme Elements */
+  .bg-sanctum-basalt {
+    background-color: #08090d;
+    background-image: 
+      radial-gradient(ellipse at 50% 0%, rgba(200, 157, 66, 0.08) 0%, transparent 60%),
+      radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 0);
+    background-size: 100% 100%, 24px 24px;
+  }
+
+  /* Core Matte-Textured Card with Chrome Edge Highlights */
+  .matte-chrome-card {
+    background: 
+      radial-gradient(ellipse at 50% 0%, rgba(200, 157, 66, 0.05) 0%, transparent 75%),
+      linear-gradient(180deg, rgba(22, 25, 33, 0.94) 0%, rgba(13, 15, 20, 0.98) 100%);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(200, 157, 66, 0.28);
+    box-shadow: 
+      inset 0 1px 0 0 rgba(248, 250, 252, 0.2),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+      inset 0 -1px 0 0 rgba(0, 0, 0, 0.8),
+      0 10px 30px -8px rgba(0, 0, 0, 0.85),
+      0 2px 8px -2px rgba(0, 0, 0, 0.6);
+    position: relative;
+  }
+
+  .matte-chrome-card:hover {
+    border-color: rgba(200, 157, 66, 0.55);
+    box-shadow: 
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.35),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+      inset 0 -1px 0 0 rgba(0, 0, 0, 0.9),
+      0 16px 40px -10px rgba(0, 0, 0, 0.9),
+      0 0 20px -2px rgba(200, 157, 66, 0.2);
+  }
+
+  .bg-card-neoclassical {
+    background: 
+      radial-gradient(ellipse at 50% 0%, rgba(200, 157, 66, 0.05) 0%, transparent 70%),
+      linear-gradient(180deg, rgba(23, 26, 35, 0.92) 0%, rgba(14, 16, 22, 0.97) 100%);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(200, 157, 66, 0.28);
+    box-shadow: 
+      inset 0 1px 0 0 rgba(248, 250, 252, 0.18),
+      inset 0 -1px 0 0 rgba(0, 0, 0, 0.7),
+      0 10px 28px -6px rgba(0, 0, 0, 0.8);
+  }
+
+  .bg-card-neoclassical-hover {
+    background: 
+      radial-gradient(ellipse at 50% 0%, rgba(200, 157, 66, 0.08) 0%, transparent 70%),
+      linear-gradient(180deg, rgba(30, 34, 45, 0.95) 0%, rgba(17, 19, 26, 0.98) 100%);
+    border-color: rgba(200, 157, 66, 0.55);
+    box-shadow: 
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.32),
+      inset 0 -1px 0 0 rgba(0, 0, 0, 0.8),
+      0 16px 36px -8px rgba(0, 0, 0, 0.85),
+      0 0 18px rgba(200, 157, 66, 0.18);
+  }
+
+  .border-brass-subtle {
+    border-color: rgba(200, 157, 66, 0.25);
+  }
+
+  .border-brass-glow {
+    border-color: rgba(200, 157, 66, 0.5);
+    box-shadow: 
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+      0 0 12px rgba(200, 157, 66, 0.22);
+  }
+
+  .text-brass-leaf {
+    color: #e5c158;
+  }
+
+  .text-brass-muted {
+    color: #c89d42;
+  }
+
+  .text-chrome-slate {
+    color: #cbd5e1;
+  }
+
+  .bg-granite-pillar {
+    background-color: #12141a;
+    background-image: 
+      radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0),
+      linear-gradient(90deg, rgba(0,0,0,0.4) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.4) 100%);
+    background-size: 16px 16px, 100% 100%;
+  }
+}
+
+/* =========================================================================
+   GLOBAL NEO-CLASSICAL MATTE TEXTURE & CHROME EDGE HIGHLIGHTS
+   Ensures all card containers, article cards, dossiers, and panels inherit
+   a consistent tactile matte finish with crisp specular chrome edge rimming.
+   ========================================================================= */
+
+/* All primary rounded UI cards */
+article,
+div[class*="rounded-2xl"][class*="bg-[#"],
+div[class*="rounded-xl"][class*="bg-[#"],
+button[class*="rounded-xl"][class*="bg-[#"],
+button[class*="rounded-2xl"][class*="bg-[#"],
+section[class*="rounded-2xl"][class*="bg-[#"] {
+  position: relative;
+  /* Top specular chrome highlight rim + deep ambient bottom shadow */
+  box-shadow: 
+    inset 0 1px 0 0 rgba(248, 250, 252, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.7),
+    0 8px 26px -6px rgba(0, 0, 0, 0.75);
+}
+
+/* Enhanced hover state for interactive cards and buttons */
+article:hover,
+button[class*="rounded-xl"][class*="bg-[#"]:hover,
+button[class*="rounded-2xl"][class*="bg-[#"]:hover,
+div[class*="rounded-2xl"][class*="hover:bg-[#"]:hover,
+div[class*="rounded-xl"][class*="hover:bg-[#"]:hover {
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.85),
+    0 14px 34px -8px rgba(0, 0, 0, 0.85),
+    0 0 16px -2px rgba(200, 157, 66, 0.18);
+}
+
+/* Inner inset blocks & telemetry panels - refined matte recess with chrome inner bevel */
+div[class*="rounded-xl"][class*="bg-[#0a0c10]"],
+div[class*="rounded-xl"][class*="bg-[#0b0c10]"],
+div[class*="rounded-xl"][class*="bg-[#0c0e14]"],
+div[class*="rounded-lg"][class*="bg-[#0a0c10]"],
+div[class*="rounded-lg"][class*="bg-[#0b0c10]"],
+div[class*="rounded-lg"][class*="bg-[#0c0e14]"] {
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 2px 4px 0 rgba(0, 0, 0, 0.6),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.03);
+}
+
+/* Diya Flicker Animation */
+@keyframes diyaFlicker {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06) translateY(-1px); }
+  75% { opacity: 0.8; transform: scale(0.97); }
+}
+
+.animate-diya {
+  animation: diyaFlicker 3s ease-in-out infinite;
+}
+
+/* Subtle breathing glow for active research elements */
+@keyframes goldPulse {
+  0%, 100% { 
+    border-color: rgba(200, 157, 66, 0.25); 
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), 0 0 0 0 rgba(200, 157, 66, 0); 
+  }
+  50% { 
+    border-color: rgba(200, 157, 66, 0.55); 
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.28), 0 0 15px rgba(200, 157, 66, 0.15); 
+  }
+}
+
+.animate-pulse-gold {
+  animation: goldPulse 4s ease-in-out infinite;
+}
